@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Traffic Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body
+    class="bg-gray-900 text-white min-h-screen flex items-center justify-center p-4"
+  >
+    <div class="max-w-3xl w-full space-y-6">
+      <h1 class="text-2xl font-bold text-center">📡 Traffic Dashboard</h1>
+
+      <canvas
+        id="trafficChart"
+        class="bg-gray-800 p-4 rounded-xl shadow-lg"
+      ></canvas>
+
+      <div class="bg-gray-800 p-4 rounded-xl shadow-lg">
+        <h2 class="text-lg font-semibold mb-2">Últimos paquetes:</h2>
+        <ul
+          id="packetList"
+          class="max-h-60 overflow-y-auto space-y-1 text-sm font-mono"
+        ></ul>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
